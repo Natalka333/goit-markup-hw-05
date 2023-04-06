@@ -43,6 +43,8 @@
     --client: rgba(142, 143, 153, 1);
     /* footer-hover */
     --green: #31D0AA;
+    --time: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,h1,h2,h3,h4,h5,h6 {
@@ -137,6 +139,9 @@ a {
     letter-spacing: 0.02em;
     font-style: normal;
     color: var(--primary-text-color);
+    transition-property: color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
 
 .header-list .link:hover,
@@ -157,6 +162,9 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color:var(--title-text-color);
+    transition-property: color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
 
 .address-link:hover,
@@ -204,6 +212,9 @@ a {
     padding: 16px 32px;
     border: 1px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition-property: background-color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
 
 .hero-btn:hover,
@@ -364,6 +375,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: background-color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
 .team-soc-icon {
     fill: var(--light);
@@ -412,6 +426,9 @@ a {
     border: 1px solid var(--accent);
     border-radius: 4px;
     padding: 12px 24px;
+    transition-property: background-color, color, box-shadow, border-color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 } 
 
 .btn:hover,
@@ -442,6 +459,9 @@ a {
 
 .work-link {
     display: block;
+    transition-property: box-shadow;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
 .work-link:hover,
 .work-link:focus {
@@ -508,6 +528,9 @@ gap: 24px;
     border: 1px solid var(--client);
     border-radius: 4px;
     color: var(--subtle-text);
+    transition-property: color, border-color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
 .client-soc-link:hover,
 .client-soc-link:focus {
@@ -591,6 +614,9 @@ margin-left: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: background-color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
