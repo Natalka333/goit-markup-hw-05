@@ -139,11 +139,30 @@ a {
     letter-spacing: 0.02em;
     font-style: normal;
     color: var(--primary-text-color);
-    transition-property: color;
+    transition-property: color, content: '';
     transition-duration: var(--time);
     transition-timing-function: var(--timing-function);
+    position: relative;
+ 
 }
+.header-list .link::after {
+    content: '';
+    width: 48px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    margin-top: 20px;
 
+    background: var(--pressed-state);
+    border-radius: 2px;
+}
+/* .header-list .link:hover::before {
+    width: 48px;
+    height: 4px;
+    color: var(--pressed-state);
+    position: absolute;
+    margin-top: 24px;
+} */
 .header-list .link:hover,
 .header-list .link:focus {
     color: var(--pressed-state)
