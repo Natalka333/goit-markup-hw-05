@@ -139,22 +139,33 @@ a {
     letter-spacing: 0.02em;
     font-style: normal;
     color: var(--primary-text-color);
-    transition-property: color;
+    transition-property: color, content;
     transition-duration: var(--time);
     transition-timing-function: var(--timing-function);
     position: relative;
+    display: block;
 }
-.header-list .link::after {
+.picS::after {
     content: '';
-    width: 48px;
+    width: 100%;
     height: 4px;
     display: block;
     position: absolute;
-    margin-top: 20px;
     background: var(--pressed-state);
     border-radius: 2px;
+    bottom: -25px;
 }
 
+.picP::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    background: var(--pressed-state);
+    border-radius: 2px;
+    bottom: -25px;
+}
 .header-list .link:hover,
 .header-list .link:focus {
     color: var(--pressed-state)
