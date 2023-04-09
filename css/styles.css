@@ -135,6 +135,9 @@ a {
     font-style: normal;
     color: var(--primary-text-color);
 }
+.header-list .link {
+    position: relative;
+}
 
 .header-list .link {
     font-weight: 500;
@@ -143,15 +146,16 @@ a {
     letter-spacing: 0.02em;
     font-style: normal;
     color: var(--primary-text-color);
-    transition-property: color, content;
+    transition: color;
     transition-duration: var(--time);
     transition-timing-function: var(--timing-function);
     position: relative;
     display: block;
 }
-.pic {
-    position: relative;
-}
+.header-list .link:hover,
+.header-list .link:focus {
+    color: var(--pressed-state)
+} 
 .pic::after {
     content: '';
     position: absolute;
@@ -159,16 +163,11 @@ a {
     width: 100%;
     height: 4px;
     display: block;
-    position: absolute;
     background: var(--pressed-state);
     border-radius: 2px;
     bottom: -25px;
 }
 
-.header-list .link:hover,
-.header-list .link:focus {
-    color: var(--pressed-state)
-}
 .address {
     font-style: normal;
 }
@@ -497,7 +496,6 @@ a {
     transform: translateY(100%);
     transition: transform var(--time) var(--timing-function);
 }
-
 .work-link {
     display: block;
     transition-property: box-shadow;
@@ -687,8 +685,8 @@ margin-left: 120px;
     left: 50%;
     transform: translate(-50%, -50%) scale(1) rotate(0);
     transition: transform var(--time) var(--timing-function);
-    padding: 9px 23px;
 }
+
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scaleY(0) rotate(-90deg); 
 }
@@ -697,17 +695,28 @@ margin-left: 120px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--accent);
-    display: block;
-    margin-left: auto;
+    color: var(--primary-text-color);
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    transition-property: color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--timing-function);
 }
-.modal-close-btn:hover {
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    color: #ffffff;
     background: var(--pressed-state);
+
 }
 .modal-icon-btn {
 width: 100%;
 height: 100%;
+fill: currentColor;
 }
 
 .is-hidden {
