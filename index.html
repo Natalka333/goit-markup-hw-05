@@ -45,7 +45,7 @@
     <main class="hero">
         <section class="hero-section">
             <h1 class="hero-subject">Effective Solutions for Your Business</h1>
-            <button type="button" class="hero-btn">Order Service</button>
+            <button data-modal-open type="button" class="hero-btn">Order Service</button>
         </section>
             
         <!-- SECTION FEATURE-->
@@ -359,7 +359,7 @@
                     </li>
                     <li class="footer-soc-item">
                         <a class="footer-soc-link link" href="">
-                        <svg class="footer-soc-icon" width="24" height="24">
+                        <svg class="footer-soc-icon" width="8" height="8">
                         <use href="./images/footer.svg#icon-linkedin-1"></use>
                         </svg>
                         </a>
@@ -368,14 +368,15 @@
             </div>
         </div>
     </footer> 
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close-btn">
-                <svg class="modal-icon" width="24" height="24">
+            <button class="modal-close-btn" type="button" data-modal-close >
+                <svg class="modal-icon-btn" width="24" height="24">
                 <use href="./images/modal.svg#icon-close-black-18dp-2-1"></use></svg></button>
         </div>
     </div>
-    
+    <script src="./js/modal.js">
+    </script>
 
 </body>
 
