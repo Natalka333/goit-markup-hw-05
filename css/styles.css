@@ -149,7 +149,7 @@ a {
     position: relative;
     display: block;
 }
-.picS::after {
+.pic::after {
     content: '';
     width: 100%;
     height: 4px;
@@ -160,16 +160,6 @@ a {
     bottom: -25px;
 }
 
-.picP::after {
-    content: '';
-    width: 100%;
-    height: 4px;
-    display: block;
-    position: absolute;
-    background: var(--pressed-state);
-    border-radius: 2px;
-    bottom: -25px;
-}
 .header-list .link:hover,
 .header-list .link:focus {
     color: var(--pressed-state)
@@ -707,7 +697,8 @@ margin-left: 120px;
     display: block;
     margin-left: auto;
 }
-.modal-close-btn {
+.modal-close-btn:hover {
+    background: var(--pressed-state);
 }
 .modal-icon-btn {
 width: 100%;
