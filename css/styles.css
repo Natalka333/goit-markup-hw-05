@@ -139,33 +139,34 @@ a {
     position: relative;
 }
 
-.header-list .link {
+.header-list {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
-    font-style: normal;
     color: var(--primary-text-color);
-    transition: color;
-    transition-duration: var(--time);
-    transition-timing-function: var(--timing-function);
-    position: relative;
-    display: block;
+    transition: color var(--transition-dur-and-func);
 }
-.header-list .link:hover,
-.header-list .link:focus {
-    color: var(--pressed-state)
-} 
-.pic::after {
+.header-list:hover,
+.header-list:focus {
+    color: var(--pressed-state);
+}
+.active {
+    color: var(--pressed-state);
+}
+.active::after {
     content: '';
+    display: block;
     position: absolute;
-    left: 0;
     width: 100%;
     height: 4px;
-    display: block;
-    background: var(--pressed-state);
+    left: 0px;
+    top: 44px;
+    background-color: var(--pressed-state);
     border-radius: 2px;
-    bottom: -25px;
+}
+
+.active {
+    color: var(--pressed-state);
 }
 
 .address {
@@ -508,7 +509,6 @@ a {
 }
 .work-link:hover .work-cover-text {
     transform: translate(0);
-
 }
 .work-aside {
     padding: 0px 16px;
